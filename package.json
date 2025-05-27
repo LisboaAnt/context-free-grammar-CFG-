@@ -1,0 +1,16 @@
+{
+  "name": "cfg-developer",
+  "version": "1.0.0",
+  "description": "Context-free grammar developer tool",
+  "main": "grammar.html",
+  "scripts": {
+    "vercel-build": "echo 'Static build - no build step needed'"
+  },
+  "keywords": [
+    "cfg",
+    "grammar",
+    "parser"
+  ],
+  "author": "Christopher Wong, Stanford University",
+  "license": "MIT"
+} 

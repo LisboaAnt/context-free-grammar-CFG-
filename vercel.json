@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "cfg-developer",
+  "builds": [
+    { "src": "**/*", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/grammar.html" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+} 
