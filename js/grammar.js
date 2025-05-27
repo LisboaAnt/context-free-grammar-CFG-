@@ -6,7 +6,7 @@
 
 
 /**
- * A Symbol is a character that can either be a terminal or nonterminal.
+ * A Symbol is a character or string that can either be a terminal or nonterminal.
  */
 function Symbol(ch, isTerminal) {
   this.ch = ch;
@@ -124,7 +124,12 @@ SymArray.prototype.toString = function(showNonterminals, options) {
       }
     }
     // Append the current Symbol to the beginning of the string.
-    str = this.symbols[i].toString(showNonterminals, args) + str;
+    var symbolStr = this.symbols[i].toString(showNonterminals, args);
+    // Adicionar espaço entre os símbolos (exceto para o primeiro/último na ordem reversa)
+    if (str !== '') {
+      symbolStr += ' ';
+    }
+    str = symbolStr + str;
   }
   return str;
 };
